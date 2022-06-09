@@ -15,7 +15,8 @@ The correct answer rate was `73.3%` when the dataset of audio sample was as foll
 * LICENCE: Creative Commons Attribution-ShareAlike 4.0 International
 * Link: https://github.com/Jakobovski/free-spoken-digit-dataset
 
-The above result can be executed in `linearSVM.py`. Download the audio sample from the link above.
+Please refer to the following repository for the above results.
+* Link: https://github.com/OkamotoDaiki/MFCC_linearSVM_TEST
 
 # Features
  
