@@ -10,7 +10,7 @@ class MelFilterBankCalc:
     Attributes:
         N: Data length.
         fs: samplingrate
-        fo: frequency Parameter. Default setting is 1.
+        fo: frequency Parameter. Default setting is 700.
         mel: Definition of the mel scale. Default setting is 1000.
         numChannels: Specifying the number of bandpass fileters. Default setting is 20.
     """
@@ -31,7 +31,7 @@ class MelFilterBankCalc:
 
     def hz2mel(self, f):
         """
-        transform Hz to mel.
+        Convert Hz to mel.
         """
         mo = self.calc_mo()
         return mo * np.log(f / self.fo + 1.0)
@@ -39,7 +39,7 @@ class MelFilterBankCalc:
 
     def mel2hz(self, m):
         """
-        transform mel to Hz
+        Convert mel to Hz
         """
         mo = self.calc_mo()
         return self.fo * (np.exp(m / mo) - 1.0)
@@ -94,6 +94,6 @@ if __name__ == "__main__":
     for channel in np.arange(0, numChannels):
         plt.plot(np.arange(0, int(N/2)) * df, filterbank[channel])
     plt.xlabel("frequency [Hz]")
-    png_fname = "mel-filterbank_fo=1Hz.png"
+    png_fname = "mel-filterbank_fo=700Hz.png"
     plt.savefig(png_fname)
     plt.show()
