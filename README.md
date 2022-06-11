@@ -4,7 +4,7 @@ Class that extracts features of voice data by MFCC using a mel-filter bank.
  
 # DEMO
  
-This repository contains the generation of mel filter banks and the output of MFCC. The figure of the mel filter bank when the frequency parameter(fo) is 1Hz is shown below.<br>
+This repository contains the generation of mel filter banks and the output of MFCC. The figure of the mel filter bank when the frequency parameter(fo) is 700Hz is shown below.<br>
 
 ![mel-filterbank_fo=700Hz](https://user-images.githubusercontent.com/49944765/173179132-a357ea67-5c45-47e4-84e9-ea1489ff2d5b.png)
 
