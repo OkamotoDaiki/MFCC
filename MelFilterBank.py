@@ -14,7 +14,7 @@ class MelFilterBankCalc:
         mel: Definition of the mel scale. Default setting is 1000.
         numChannels: Specifying the number of bandpass fileters. Default setting is 20.
     """
-    def __init__(self, N, fs, fo=1, mel=1000, numChannels=20):
+    def __init__(self, N, fs, fo=700, mel=1000, numChannels=20):
         self.N = N
         self.fs = fs
         self.fo = fo
