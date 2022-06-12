@@ -1,6 +1,8 @@
 # MFCC (Mel-frequency cepstrum coefficients)
  
 Class that extracts features of voice data by MFCC using a mel-filter bank.
+
+Commentary article[JP]: https://qiita.com/Oka_D/items/4622b5040deeb77c9bd4
  
 # DEMO
  
