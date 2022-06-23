@@ -38,7 +38,7 @@ class MFCCclass:
         filterbank, fcenters = melfileterbank_obj.melfilterbank()
         inner_product_fbank = np.dot(dft, filterbank.T)
         modify_dot = ModificationTool.assign_zero2mean(inner_product_fbank)
-        mspec = np.log10(modify_dot)
+        mspec = 10*np.log10(modify_dot**2)
         ceps = scipy.fftpack.realtransforms.dct(mspec, norm="ortho")
         output_ceps = ceps[1:self.cutpoint + 1]
         return output_ceps
