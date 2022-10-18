@@ -34,7 +34,7 @@ class MFCCclass:
         
         N = len(self.data)
         dft = np.abs(np.fft.fft(self.data))[:int(N/2)]
-        melfileterbank_obj = MelFilterBank.MelFilterBankCalc(N, self.fs)
+        melfileterbank_obj = MelFilterBank.MelFilterBankCalc(N, self.fs, numChannels=self.numChannels)
         filterbank, fcenters = melfileterbank_obj.melfilterbank()
         inner_product_fbank = np.dot(dft, filterbank.T)
         modify_dot = ModificationTool.assign_zero2mean(inner_product_fbank)
